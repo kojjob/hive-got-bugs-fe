@@ -24,7 +24,7 @@ class GitHubLogin extends Component {
     },
   };
 
-  componentDidMount = () => {
+  login = () => {
     firebase
       .auth()
       .signInWithPopup(new firebase.auth.GithubAuthProvider())
@@ -32,6 +32,7 @@ class GitHubLogin extends Component {
         const { username, profile } = userCredential.additionalUserInfo;
         const image_url = profile.avatar_url;
         this.setState({ isSignedIn: true, username, image_url });
+        console.log(this.state);
       })
       .catch((error) => {
         console.log(error);
@@ -52,10 +53,7 @@ class GitHubLogin extends Component {
             <button onClick={this.signOut}>Sign out</button>
           </span>
         ) : (
-          <StyledFirebaseAuth
-            uiConfig={this.uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
+          <button onClick={this.login}>login</button>
         )}
       </div>
     );
