@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import firebase from "firebase";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { GithubLoginButton } from "react-social-login-buttons";
 
 firebase.initializeApp({
   apiKey: "AIzaSyC2veJu3sp0kAhZtjCB05PY9_ceQI1ROe0",
@@ -55,6 +57,10 @@ class GitHubLogin extends Component {
         ) : (
           <button onClick={this.login}>login</button>
         )}
+        <FontAwesomeIcon icon={faGithub} size="2x" />
+        <div>
+          <GithubLoginButton />
+        </div>
       </div>
     );
   }
