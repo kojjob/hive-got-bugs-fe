@@ -1,6 +1,7 @@
 import React from "react"
 
 import Title from "./Title"
+import Problems from "./Problems"
 import Icon from "./Icon"
 
 class Home extends React.Component {
@@ -9,14 +10,19 @@ class Home extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <div className="homeContainer">
-      <Icon />
+        <div className="iconNav">
+          <Icon />
+        </div>
         <div className="header">
           <Title />
         </div>
+        <div className="problemsList">
+          <Problems />
+        </div>
       </div>
-    )
+    );
   }
 }
 
