@@ -10,7 +10,6 @@ firebase.initializeApp({
 class GitHubLogin extends Component {
   state = {
     isSignedIn: false,
-    user: "",
   };
 
   uiConfig = {
@@ -26,7 +25,23 @@ class GitHubLogin extends Component {
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged((user) => {
       this.setState({ isSignedIn: !!user });
+      if (this.state.isSignedIn) {
+        this.currentUser();
+      }
     });
+  };
+
+  currentUser = () => {
+    firebase
+      .auth()
+      .signInWithPopup(new firebase.auth.GithubAuthProvider())
+      .then((userCredential) => {
+        console.log(userCredential.additionalUserInfo.username);
+        console.log(userCredential.additionalUserInfo.profile);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   render() {
