@@ -10,13 +10,16 @@ firebase.initializeApp({
 class GitHubLogin extends Component {
   state = {
     isSignedIn: false,
+    user: "",
   };
 
   uiConfig = {
     signInFlow: "popup",
     signInOptions: [firebase.auth.GithubAuthProvider.PROVIDER_ID],
     callbacks: {
-      signInSuccess: () => false,
+      signInSuccessWithAuthResult: () => {
+        console.log("signed in");
+      },
     },
   };
 
