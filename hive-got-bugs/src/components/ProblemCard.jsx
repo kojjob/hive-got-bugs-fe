@@ -1,9 +1,19 @@
 import React from "react";
-import Hexagon from "react-hexagon";
+import { Link } from "@reach/router";
 
 function ProblemCard() {
   return (
-    <Hexagon style={{height: "100px", width: "100px", fill: "#A6CBA0", strokeWidth: "1"}} />
+    <Link to="/problem">
+      <div className="hexagon">
+        <p id="headerOne">Posted By | Posted When</p>
+        <p id="headerTwo">Difficulty Rating | Language</p>
+        <p id="title">Title</p>
+        <p id="body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tempora
+          fugit voluptate...
+        </p>
+      </div>
+    </Link>
   );
 }
 

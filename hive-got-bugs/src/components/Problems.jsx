@@ -30,6 +30,10 @@ class Problems extends React.Component {
 
         <div className="problemCardContainer">
           <ProblemCard />
+          <br />
+          <ProblemCard />
+          <br />
+          <ProblemCard />
         </div>
       </div>
     );
