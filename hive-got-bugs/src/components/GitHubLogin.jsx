@@ -31,9 +31,7 @@ class GitHubLogin extends Component {
       .then((userCredential) => {
         const { username, profile } = userCredential.additionalUserInfo;
         const image_url = profile.avatar_url;
-
         this.setState({ isSignedIn: true, username, image_url });
-        console.log(this.state);
       })
       .catch((error) => {
         console.log(error);
