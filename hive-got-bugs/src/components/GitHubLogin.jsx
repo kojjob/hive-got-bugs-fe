@@ -10,6 +10,8 @@ firebase.initializeApp({
 class GitHubLogin extends Component {
   state = {
     isSignedIn: false,
+    username: "",
+    image_url: "",
   };
 
   uiConfig = {
@@ -17,31 +19,30 @@ class GitHubLogin extends Component {
     signInOptions: [firebase.auth.GithubAuthProvider.PROVIDER_ID],
     callbacks: {
       signInSuccessWithAuthResult: () => {
-        console.log("signed in");
+        this.setState({ isSignedIn: true });
       },
     },
   };
 
   componentDidMount = () => {
-    firebase.auth().onAuthStateChanged((user) => {
-      this.setState({ isSignedIn: !!user });
-      if (this.state.isSignedIn) {
-        this.currentUser();
-      }
-    });
-  };
-
-  currentUser = () => {
     firebase
       .auth()
       .signInWithPopup(new firebase.auth.GithubAuthProvider())
       .then((userCredential) => {
-        console.log(userCredential.additionalUserInfo.username);
-        console.log(userCredential.additionalUserInfo.profile);
+        const { username, profile } = userCredential.additionalUserInfo;
+        const image_url = profile.avatar_url;
+
+        this.setState({ isSignedIn: true, username, image_url });
+        console.log(this.state);
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  signOut = () => {
+    firebase.auth().signOut();
+    this.setState({ isSignedIn: false });
   };
 
   render() {
@@ -50,7 +51,7 @@ class GitHubLogin extends Component {
         {this.state.isSignedIn ? (
           <span>
             <div>Signed in</div>
-            <button onClick={() => firebase.auth().signOut()}>Sign out</button>
+            <button onClick={this.signOut}>Sign out</button>
           </span>
         ) : (
           <StyledFirebaseAuth
