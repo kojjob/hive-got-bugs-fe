@@ -3,9 +3,10 @@ import firebase from "firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { GithubLoginButton } from "react-social-login-buttons";
+import apiKey from "../firebaseAPI";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyC2veJu3sp0kAhZtjCB05PY9_ceQI1ROe0",
+  apiKey: apiKey,
   authDomain: "hive-got-bugs.firebaseapp.com",
 });
 
