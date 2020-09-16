@@ -5,6 +5,8 @@ import "./App.css";
 import "./css/problemsList.css";
 import "./css/problemCard.css";
 import "./css/singleProblem.css";
+import "./css/suggestions.css";
+import "./css/suggestionCard.css"
 
 import Home from "./components/Home";
 import SingleProblem from "./components/SingleProblem";
