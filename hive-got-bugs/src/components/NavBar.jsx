@@ -7,6 +7,7 @@ function NavBar() {
   return (
     <div className="navbar">
       <ToggleViewer label={"Menu"}>
+
         <StyledLink as="button" to="/homepage">
           Home
         </StyledLink>
@@ -22,6 +23,26 @@ function NavBar() {
       </ToggleViewer>
       <ToggleViewer label="Search" default={false}>
         <Search />
+        
+        <Link to="/homepage">
+          <button>Home</button>
+        </Link>
+        <Link to="/dashboard">
+          <button>Dashboard</button>
+        </Link>
+        <Link to="/become-a-mentor">
+          <button>Become a mentor</button>
+        </Link>
+        <Link to="/mentors">
+          <button>Mentors</button>
+        </Link>
+
+      <ToggleViewer label="Search" default={false}>
+
+        <form>
+          <input type="text" />
+          <button type="submit">Find</button>
+        </form>
       </ToggleViewer>
     </div>
   );
