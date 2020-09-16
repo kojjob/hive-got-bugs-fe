@@ -1,15 +1,18 @@
+
 import React from "react"
 
 import Title from "./Title"
 import Problems from "./Problems"
 import Icon from "./Icon"
 
-class Home extends React.Component {
-  state = {
+import React from "react";
 
-  }
+
+class Home extends React.Component {
+  state = {};
 
   render() {
+
     return (
       <div className="homeContainer">
         <div className="iconNav">
@@ -23,7 +26,10 @@ class Home extends React.Component {
         </div>
       </div>
     );
+
+    return <div className="homeContainer"></div>;
+
   }
 }
 
-export default Home
+export default Home;
