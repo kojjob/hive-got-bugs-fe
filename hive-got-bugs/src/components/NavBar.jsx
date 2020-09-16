@@ -1,6 +1,7 @@
 import React from "react";
 import ToggleViewer from "./ToggleViewer";
 import { Link } from "@reach/router";
+import Search from "./Search";
 
 function NavBar() {
   return (
@@ -20,9 +21,7 @@ function NavBar() {
         </Link>
       </ToggleViewer>
       <ToggleViewer label="Search" default={false}>
-        <form>
-          <input type="text" />
-        </form>
+        <Search />
       </ToggleViewer>
     </div>
   );
