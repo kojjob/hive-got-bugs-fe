@@ -19,7 +19,7 @@ function NavBar() {
           <button>Mentors</button>
         </Link>
       </ToggleViewer>
-      <ToggleViewer label={"Search"}>
+      <ToggleViewer label="Search" default="false">
         <form>
           <input type="text" />
           <button type="submit">Find</button>
