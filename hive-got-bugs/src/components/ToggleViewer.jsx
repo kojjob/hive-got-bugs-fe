@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class ToggleViewer extends Component {
   state = {
-    isVisible: false,
+    isVisible: this.props.default,
   };
 
   toggleViewer = () => {
