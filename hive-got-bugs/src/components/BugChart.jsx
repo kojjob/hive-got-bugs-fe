@@ -41,7 +41,7 @@ class BugChart extends Component {
           <Bar
             data={data}
             width={100}
-            height={300}
+            height={200}
             options={{
               maintainAspectRatio: false,
             }}
