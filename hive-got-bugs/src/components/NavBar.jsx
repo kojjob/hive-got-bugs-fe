@@ -22,7 +22,6 @@ function NavBar() {
       <ToggleViewer label="Search" default={false}>
         <form>
           <input type="text" />
-          <button type="submit">Find</button>
         </form>
       </ToggleViewer>
     </div>
