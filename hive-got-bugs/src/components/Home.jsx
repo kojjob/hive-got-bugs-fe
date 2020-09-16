@@ -1,23 +1,11 @@
-import React from "react"
-
-import Title from "./Title"
-import Icon from "./Icon"
+import React from "react";
 
 class Home extends React.Component {
-  state = {
-
-  }
+  state = {};
 
   render() {
-    return(
-      <div className="homeContainer">
-      <Icon />
-        <div className="header">
-          <Title />
-        </div>
-      </div>
-    )
+    return <div className="homeContainer"></div>;
   }
 }
 
-export default Home
+export default Home;
