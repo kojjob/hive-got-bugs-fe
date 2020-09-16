@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Bar } from "react-chartjs-2";
+import ToggleViewer from "./ToggleViewer";
 
 class BugChart extends Component {
   state = {
@@ -18,7 +19,7 @@ class BugChart extends Component {
       labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
       datasets: [
         {
-          label: "Bug points every 30 days",
+          label: "Bug points every 30 days ",
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(153, 102, 255, 0.2)",
@@ -36,14 +37,16 @@ class BugChart extends Component {
     if (isLoading) return <p>Bug chart is loading...</p>;
     return (
       <div>
-        <Bar
-          data={data}
-          width={100}
-          height={300}
-          options={{
-            maintainAspectRatio: false,
-          }}
-        />
+        <ToggleViewer label="Show Chart">
+          <Bar
+            data={data}
+            width={100}
+            height={300}
+            options={{
+              maintainAspectRatio: false,
+            }}
+          />
+        </ToggleViewer>
       </div>
     );
   }
