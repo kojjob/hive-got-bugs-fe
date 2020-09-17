@@ -14,7 +14,6 @@ class MentorForm extends Component {
   };
 
   onInput = ({ target: { value, name } }) => {
-    //console.log(value);
     if (name === "skills") {
       const skill1 = value.split(",")[0];
       const skill2 = value.split(",")[1];

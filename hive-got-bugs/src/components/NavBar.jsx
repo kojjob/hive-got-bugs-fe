@@ -6,7 +6,7 @@ import "../css/navbar.css";
 function NavBar() {
   return (
     <div>
-      <ToggleViewer label={"Menu"} className="navbar">
+      <ToggleViewer label="Menu" className="navbar">
         <StyledLink as="button" to="/homepage">
           Home
         </StyledLink>

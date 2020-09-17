@@ -6,6 +6,7 @@ import "./css/problemCard.css";
 import "./css/singleProblem.css";
 import "./css/suggestions.css";
 import "./css/suggestionCard.css";
+import "./css/button.css";
 import Home from "./components/Home";
 import SingleProblem from "./components/SingleProblem";
 import Header from "./components/Header";
@@ -15,11 +16,12 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <MentorForm />
-      {/* <Router>
+
+      <Router>
         <Home path="/" />
+        <MentorForm path="/become-a-mentor" />
         <SingleProblem path="/problem" />
-      </Router> */}
+      </Router>
     </div>
   );
 }
