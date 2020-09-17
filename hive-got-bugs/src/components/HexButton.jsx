@@ -1,9 +1,9 @@
 import React from "react";
 
-const HexButton = ({ className }) => {
+const HexButton = ({ className, label, onclick }) => {
   return (
-    <button className={className}>
-      <p>Click Me</p>
+    <button className={className} onClick={onclick}>
+      <p>{label}</p>
     </button>
   );
 };

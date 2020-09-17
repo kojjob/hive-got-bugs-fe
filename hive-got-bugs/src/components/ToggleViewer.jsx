@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { StyledHexButton } from "../styled/lib";
 
 class ToggleViewer extends Component {
   state = {
@@ -16,7 +17,9 @@ class ToggleViewer extends Component {
     const { isVisible } = this.state;
     return (
       <div>
-        <button onClick={this.toggleViewer}>{label}</button>
+        <StyledHexButton onclick={this.toggleViewer} label={label}>
+          {label}
+        </StyledHexButton>
         {isVisible && this.props.children}
       </div>
     );

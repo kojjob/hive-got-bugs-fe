@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import HexButton from "../components/HexButton";
 import { Link } from "@reach/router";
+
 export const StyledHexButton = styled(HexButton)`
   position: relative;
   width: 70px;

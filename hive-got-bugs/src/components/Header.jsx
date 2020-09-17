@@ -1,16 +1,18 @@
 import React from "react";
-import Title from "./Title";
-import Icon from "./Icon";
-import NavBar from "./NavBar";
 
+import NavBar from "./NavBar";
+import Icon from "./Icon";
+import Title from "./Title";
 const Header = () => {
   return (
     <div className="homeContainer">
-      <Icon />
-      <NavBar />
+      <div className="iconNav">
+        <Icon />
+      </div>
       <div className="header">
         <Title />
       </div>
+      <NavBar />
     </div>
   );
 };
