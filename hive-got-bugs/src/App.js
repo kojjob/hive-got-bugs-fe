@@ -6,13 +6,10 @@ import "./css/problemsList.css";
 import "./css/problemCard.css";
 import "./css/singleProblem.css";
 import "./css/suggestions.css";
-import "./css/suggestionCard.css"
+import "./css/suggestionCard.css";
 
 import Home from "./components/Home";
 import SingleProblem from "./components/SingleProblem";
-
-import "./App.css";
-import { Router } from "@reach/router";
 import Header from "./components/Header";
 import { StyledHexButton } from "./styled/lib";
 
@@ -20,12 +17,12 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Home path="/"/>
+        <Home path="/" />
         <SingleProblem path="/problem" />
-      <Header />
+      </Router>
 
+      <Header />
       <StyledHexButton />
-      <Router></Router>
     </div>
   );
 }

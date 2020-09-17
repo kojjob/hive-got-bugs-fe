@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 import ToggleViewer from "./ToggleViewer";
 import { StyledLink } from "../styled/lib";
 import Search from "./Search";
@@ -7,7 +8,6 @@ function NavBar() {
   return (
     <div className="navbar">
       <ToggleViewer label={"Menu"}>
-
         <StyledLink as="button" to="/homepage">
           Home
         </StyledLink>
@@ -21,9 +21,10 @@ function NavBar() {
           Mentors
         </StyledLink>
       </ToggleViewer>
+
       <ToggleViewer label="Search" default={false}>
         <Search />
-        
+
         <Link to="/homepage">
           <button>Home</button>
         </Link>
@@ -36,9 +37,9 @@ function NavBar() {
         <Link to="/mentors">
           <button>Mentors</button>
         </Link>
+      </ToggleViewer>
 
       <ToggleViewer label="Search" default={false}>
-
         <form>
           <input type="text" />
           <button type="submit">Find</button>
