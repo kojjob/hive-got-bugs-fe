@@ -17,7 +17,7 @@ class ToggleViewer extends Component {
     const { isVisible } = this.state;
     return (
       <div>
-        <StyledHexButton onclick={this.toggleViewer} label={label}>
+        <StyledHexButton as="button" onclick={this.toggleViewer} label={label}>
           {label}
         </StyledHexButton>
         {isVisible && this.props.children}

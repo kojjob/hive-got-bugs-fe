@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import SingleProblem from "./components/SingleProblem";
 import Header from "./components/Header";
 import MentorForm from "./components/MentorForm";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Home path="/" />
         <MentorForm path="/become-a-mentor" />
         <SingleProblem path="/problem" />
+        <Dashboard path="/dashboard" />
       </Router>
     </div>
   );

@@ -37,11 +37,8 @@ class BugChart extends Component {
     if (isLoading) return <p>Bug chart is loading...</p>;
     return (
       <div>
-
-        <ToggleViewer label="Show Chart" default="true">
-=======
+        <ToggleViewer label="Show Chart" default="true"></ToggleViewer>
         <ToggleViewer label="Show Chart" default={true}>
-
           <Bar
             data={data}
             width={100}
