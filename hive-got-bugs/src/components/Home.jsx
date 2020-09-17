@@ -1,5 +1,8 @@
 import React from "react";
+
+import Title from "./Title";
 import Problems from "./Problems";
+import Icon from "./Icon";
 
 class Home extends React.Component {
   state = {};
@@ -10,6 +13,8 @@ class Home extends React.Component {
         <Problems />
       </div>
     );
+
+    // return <div className="homeContainer"></div>;
   }
 }
 
