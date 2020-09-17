@@ -1,21 +1,7 @@
-// import React from "react";
-// import { MDBCol } from "mdbreact";
+import React from "react";
 
-// const Search = () => {
-//   return (
-//     <div>
-//       <form>
-//         <MDBCol md="6">
-//           <input
-//             className="form-control"
-//             type="text"
-//             placeholder="Search"
-//             aria-label="Search"
-//           />
-//         </MDBCol>
-//       </form>
-//     </div>
-//   );
-// };
+const Search = () => {
+  return <form>Search here</form>;
+};
 
-// export default Search;
+export default Search;

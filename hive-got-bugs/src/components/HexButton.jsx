@@ -1,13 +1,11 @@
 import React from "react";
 import "../css/button.css";
 
-const HexButton = ({ className, label, onclick }) => {
+const HexButton = ({ className, label }) => {
   return (
-    <div className="hexbutton">
-      <button className={className} onClick={onclick}>
-        <p>{label}</p>
-      </button>
-    </div>
+    <button className={className}>
+      <p>{label}</p>
+    </button>
   );
 };
 

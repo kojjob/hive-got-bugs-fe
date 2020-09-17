@@ -1,8 +1,9 @@
 import React from "react";
 
-import NavBar from "./NavBar";
+import { StyledMainNav } from "../styled/lib";
 import Icon from "./Icon";
 import Title from "./Title";
+
 const Header = () => {
   return (
     <div className="homeContainer">
@@ -12,7 +13,7 @@ const Header = () => {
       <div className="header">
         <Title />
       </div>
-      <NavBar />
+      <StyledMainNav />
     </div>
   );
 };
