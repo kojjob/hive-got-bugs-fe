@@ -37,3 +37,7 @@ input {
   margin-top: 6px;
   margin-bottom: 16px;
 }
+
+textarea {
+  margin-bottom: 16px;
+}

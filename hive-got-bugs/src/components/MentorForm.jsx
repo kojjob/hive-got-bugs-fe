@@ -2,7 +2,28 @@ import React, { Component } from "react";
 import "../css/mentorForm.css";
 
 class MentorForm extends Component {
-  state = { isLoading: true };
+  state = {
+    bio: "",
+    skills: [],
+    github: "",
+  };
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+  };
+
+  onInput = ({ target: { value, name } }) => {
+    //console.log(value);
+    if (name === "skills") {
+      const skill1 = value.split(",")[0];
+      const skill2 = value.split(",")[1];
+      const skill3 = value.split(",")[2];
+      this.setState({ skills: [skill1, skill2, skill3] });
+    } else {
+      this.setState({ [name]: value });
+    }
+  };
 
   render() {
     return (
@@ -14,18 +35,34 @@ class MentorForm extends Component {
             mentor. Fill out your mentor profile below!
           </p>
         </header>
-        <form className="form" onSubmit>
-          <label for="input">Bio:</label>
-          <input type="text" id="input" />
+        <form className="form" onSubmit={this.onSubmit}>
+          <label>Bio:</label>
+          <textarea
+            name="bio"
+            cols="25"
+            rows="8"
+            placeholder="Write here..."
+            onChange={this.onInput}
+          ></textarea>
           <label>
             Skills:
-            <input type="text" />
+            <input
+              type="text"
+              name="skills"
+              placeholder="Write here..."
+              onChange={this.onInput}
+            />
           </label>
           <label>
-            Github URL:
-            <input type="text" />
+            Github Username:
+            <input
+              type="text"
+              name="github"
+              placeholder="Write here..."
+              onChange={this.onInput}
+            />
           </label>
-          <button type="submit"></button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
