@@ -1,11 +1,8 @@
-
 import React from "react"
 
 import Title from "./Title"
 import Problems from "./Problems"
 import Icon from "./Icon"
-
-import React from "react";
 
 
 class Home extends React.Component {
@@ -27,7 +24,7 @@ class Home extends React.Component {
       </div>
     );
 
-    return <div className="homeContainer"></div>;
+    // return <div className="homeContainer"></div>;
 
   }
 }
