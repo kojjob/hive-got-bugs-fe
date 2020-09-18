@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Bar } from "react-chartjs-2";
-import ToggleViewer from "./ToggleViewer";
+import ToggleViewer from "../ToggleViewer";
 
 class BugChart extends Component {
   state = {

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledHexButton } from "../styled/lib";
+import { StyledHexButton } from "../../styled/lib";
 
 const MenuNav = ({ className }) => {
   return (

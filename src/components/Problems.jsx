@@ -1,6 +1,6 @@
 import React from "react";
 
-import ProblemCard from "./ProblemCard";
+import ProblemCard from "./home/ProblemCard";
 
 class Problems extends React.Component {
   state = {};
@@ -13,18 +13,30 @@ class Problems extends React.Component {
         <div className="dropDown">
           <h4 className="dropBtn">Sort By:</h4>
           <div className="dropdownContent">
-            <a className="sortBy">Highest Difficulty</a>
-            <a className="sortBy">Most Recent</a>
-            <a className="sortBy">Oldest</a>
+            <a className="sortBy" href="www.example.com">
+              Highest Difficulty
+            </a>
+            <a className="sortBy" href="www.example.com">
+              Most Recent
+            </a>
+            <a className="sortBy" href="www.example.com">
+              Oldest
+            </a>
           </div>
         </div>
 
         <div className="dropDown">
           <h4 className="dropBtn">Filter By:</h4>
           <div className="dropdownContent">
-            <a className="sortBy">Coding Language</a>
-            <a className="sortBy">Coding Language</a>
-            <a className="sortBy">Coding Language</a>
+            <a className="sortBy" href="www.example.com">
+              Coding Language
+            </a>
+            <a className="sortBy" href="www.example.com">
+              Coding Language
+            </a>
+            <a className="sortBy" href="www.example.com">
+              Coding Language
+            </a>
           </div>
         </div>
 
