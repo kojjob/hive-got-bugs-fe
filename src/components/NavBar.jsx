@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@reach/router";
+// import { Link } from "@reach/router";
 import ToggleViewer from "./ToggleViewer";
 import { StyledLink } from "../styled/lib";
 import Search from "./Search";
