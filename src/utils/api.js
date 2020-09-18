@@ -9,10 +9,10 @@ const sortRef = {
   oldest: { sort_by: "created_at", order: "asc" },
 };
 
-export const getProblems = (sort) => {
+export const getProblems = (sort, solved) => {
   const { sort_by, order } = sortRef[sort];
 
   return axiosInstance
-    .get("/problems", { params: { sort_by, order } })
+    .get("/problems", { params: { sort_by, order, solved } })
     .then(({ data: { problems } }) => problems);
 };

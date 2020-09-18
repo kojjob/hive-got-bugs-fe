@@ -36,6 +36,10 @@ export const StyledHexButton = styled(Link)`
     width: 0;
     border-top: 20.21px solid #b8dbd9;
   }
+
+  &:hover {
+    font-weight: bold;
+  }
 `;
 
 export const StyledDifficultyButton = styled.button`
@@ -53,6 +57,16 @@ export const StyledDifficultyButton = styled.button`
     if (difficulty === "medium") return "#e8dc9e";
     if (difficulty === "hard") return "#e5a1a1";
   }};
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const StyledLoader = styled(Loader)``;

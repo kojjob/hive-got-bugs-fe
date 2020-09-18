@@ -19,20 +19,22 @@ class Home extends Component {
 
   componentDidMount() {
     const { selectedSort } = this.state;
-    this.fetchProblems(selectedSort);
+    const isSolved = false;
+    this.fetchProblems(selectedSort, isSolved);
   }
 
   componentDidUpdate(prevProps, prevState) {
     const { selectedSort } = this.state;
+    const isSolved = false;
     if (prevState.selectedSort !== selectedSort) {
-      this.fetchProblems(selectedSort);
+      this.fetchProblems(selectedSort, isSolved);
     }
   }
 
-  fetchProblems(selectedSort) {
+  fetchProblems(selectedSort, isSolved) {
     this.setState({ isLoading: true });
     api
-      .getProblems(selectedSort)
+      .getProblems(selectedSort, isSolved)
       .then((problems) => {
         this.setState({ problems, isLoading: false });
       })
