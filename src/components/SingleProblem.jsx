@@ -1,7 +1,7 @@
 import React from "react";
 
-import Title from "./Title";
-import Icon from "./Icon";
+// import Title from "./Title";
+// import Icon from "./Icon";
 import Suggestions from "./Suggestions";
 
 class SingleProblem extends React.Component {
@@ -10,12 +10,8 @@ class SingleProblem extends React.Component {
   render() {
     return (
       <div className="singleProblemContainer">
-        <div className="iconNav">
-          <Icon />
-        </div>
-        <div className="header">
-          <Title />
-        </div>
+        <div className="iconNav">{/* <Icon /> */}</div>
+        <div className="header">{/* <Title /> */}</div>
         <div className="problemsContainer" id="singleProblem">
           <h2>Solve A Problem</h2>
 
