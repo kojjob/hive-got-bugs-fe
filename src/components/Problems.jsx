@@ -1,6 +1,6 @@
 import React from "react";
 
-import ProblemCard from "./ProblemCard";
+import ProblemCard from "./home/ProblemCard";
 
 class Problems extends React.Component {
   state = {};

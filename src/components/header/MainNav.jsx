@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { StyledHexButton } from "../styled/lib";
+import { StyledHexButton } from "../../styled/lib";
 import Search from "./Search";
-import { StyledMenuNav } from "../styled/lib";
+import { StyledMenuNav } from "../../styled/header";
+import Icon from "./Icon";
 
 class MainNav extends Component {
   state = { searchIsVisible: false, menuIsVisible: false };
@@ -23,8 +24,9 @@ class MainNav extends Component {
     const { className } = this.props;
     return (
       <>
-        <nav>
-          <ul className={className}>
+        <nav className={className}>
+          <Icon />
+          <ul>
             <li>
               <StyledHexButton as="button" onClick={this.toggleMenu}>
                 Menu

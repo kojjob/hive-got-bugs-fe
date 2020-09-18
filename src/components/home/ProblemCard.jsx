@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-function ProblemCard() {
+function ProblemCard({ problem, className }) {
   return (
     <Link to="/problem">
       <div className="hexagon">

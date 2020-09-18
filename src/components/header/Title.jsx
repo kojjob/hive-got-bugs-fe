@@ -1,11 +1,11 @@
 import React from "react";
 
-function Title() {
+function Title({ className }) {
   return (
-    <div className="titleContainer">
+    <section className={className}>
       <h1>Hive Got Bugs</h1>
       <h4>A site for programmers to share solutions to common problems</h4>
-    </div>
+    </section>
   );
 }
 

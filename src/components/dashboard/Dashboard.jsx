@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BugChart from "./BugChart";
-import "../dashboard.css";
+// import "../dashboard.css";
 
 class Dashboard extends Component {
   state = { isLoading: true, user: this.props.user };
