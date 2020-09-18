@@ -20,9 +20,6 @@ function App() {
         <Home path="/" />
         <SingleProblem path="/problem" />
       </Router>
-
-      <Header />
-      <StyledHexButton />
     </div>
   );
 }
