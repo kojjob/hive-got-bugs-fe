@@ -1,6 +1,6 @@
 import React from "react";
 
-import SuggestionCard from "./SuggestionCard"
+import SuggestionCard from "./SuggestionCard";
 
 class Suggestions extends React.Component {
   state = {};
@@ -14,7 +14,7 @@ class Suggestions extends React.Component {
           <br />
           <form action="">
             <label htmlFor="">Enter Your Suggestion Here:</label>
-            <input type="text" id="textBox"/>
+            <input type="text" id="textBox" />
             <button class="button-submit">
               <div className="hexagon-button">Submit</div>
             </button>
@@ -22,7 +22,7 @@ class Suggestions extends React.Component {
         </div>
 
         <SuggestionCard />
-        <br/>
+        <br />
         <SuggestionCard />
       </div>
     );

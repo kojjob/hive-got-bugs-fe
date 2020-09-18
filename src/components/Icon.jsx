@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 import { Link } from "@reach/router";
 
-import logo from "../img/bug-logo.svg"
+import logo from "../img/bug-logo.svg";
 
 function Icon() {
   return (
@@ -13,4 +13,4 @@ function Icon() {
   );
 }
 
-export default Icon
+export default Icon;
