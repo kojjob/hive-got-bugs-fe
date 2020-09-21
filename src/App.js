@@ -12,6 +12,7 @@ import SingleProblem from "./components/SingleProblem";
 import Header from "./components/header/Header";
 import MentorForm from "./components/MentorForm";
 import Dashboard from "./components/dashboard/Dashboard";
+import MentorList from "./components/mentors/MentorList";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Router>
         <StyledHome path="/" />
+        <MentorList path="/mentors" />
         <MentorForm path="/become-a-mentor" />
         <SingleProblem path="/problem" />
         <Dashboard path="/dashboard" />

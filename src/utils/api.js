@@ -16,3 +16,13 @@ export const getProblems = (sort, solved) => {
     .get("/problems", { params: { sort_by, order, solved } })
     .then(({ data: { problems } }) => problems);
 };
+
+// exports.const getAllUsers = () => {
+
+// }
+
+export const getAllMentors = () => {
+  return axiosInstance.get("/users?role=mentor").then((res) => {
+    return res.data.users;
+  });
+};
