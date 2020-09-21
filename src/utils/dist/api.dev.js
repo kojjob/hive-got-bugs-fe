@@ -46,6 +46,7 @@ exports.getProblems = getProblems;
 
 var getAllMentors = function getAllMentors() {
   return axiosInstance.get("/users?role=mentor").then(function (res) {
+    console.log(res.data.users);
     return res.data.users;
   });
 };

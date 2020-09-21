@@ -1,0 +1,60 @@
+.main-mentor {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-gap: 2rem;
+  margin: 0 auto;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.mentorCards {
+  width: 260px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 1rem;
+  margin: 4rem 0 0 0;
+}
+
+.mentor-img {
+  margin: -45px;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.mentor-bio {
+  display: block;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.mentor-bio h1 {
+  font-weight: 400;
+}
+
+.mentor-bio p {
+  font-weight: 100;
+}
+
+.mentor-skills {
+  display: flex;
+}
+
+.mentor-skills h5 {
+  margin-right: 1rem;
+  /* background: rgb(156, 214, 214); */
+  padding: .2rem;
+  border-radius: 45%;
+  /* color: #ffffff; */
+  font-weight: bold;
+}
+
+.mentor-stats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 2rem;
+}

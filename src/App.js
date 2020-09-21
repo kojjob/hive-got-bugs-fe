@@ -1,6 +1,6 @@
 import React from "react";
 import { Router } from "@reach/router";
-// import "./App.css";
+import "./App.css";
 // import "./css/problemsList.css";
 // import "./css/problemCard.css";
 // import "./css/singleProblem.css";
@@ -24,7 +24,7 @@ function App() {
         <MentorForm path="/become-a-mentor" />
         <SingleProblem path="/problem" />
         <Dashboard path="/dashboard" />
-      </Router>
+      </Router>{" "}
     </div>
   );
 }

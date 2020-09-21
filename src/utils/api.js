@@ -23,6 +23,7 @@ export const getProblems = (sort, solved) => {
 
 export const getAllMentors = () => {
   return axiosInstance.get("/users?role=mentor").then((res) => {
+    console.log(res.data.users);
     return res.data.users;
   });
 };

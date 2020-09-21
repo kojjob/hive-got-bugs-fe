@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as api from "../../utils/api";
 
+import "./mentor.css";
+
 class MentorList extends Component {
   state = {
     mentors: [],
@@ -26,14 +28,24 @@ class MentorList extends Component {
     if (isLoading) return <p>Loading...</p>;
 
     return (
-      <main className="mentorCards">
+      <main className="main-mentor">
         {mentors.map((mentor) => (
-          <section key={mentor.username}>
-            <h1>{mentor.name}</h1>
-            <h4>{mentor.bug_points}</h4>
-            <p>{mentor.avatar_url}</p>
-            <p>{mentor.description}</p>
-            <p>{mentor.online_status}</p>
+          <section key={mentor.username} className="mentorCards">
+            <img src={mentor.avatar_url} alt="" className="mentor-img" />
+            <section className="mentor-bio">
+              <h1>{mentor.name}</h1>
+              <p>{mentor.description}</p>
+            </section>
+            <section className="mentor-skills">
+              <h5>{mentor.skill1}</h5>
+              <h5>{mentor.skill2}</h5>
+              <h5>{mentor.skill3}</h5>
+              <h5>{mentor.skill4}</h5>
+            </section>
+            <section className="mentor-stats">
+              <p>{mentor.bug_points}</p>
+              <p>{mentor.online_status}</p>
+            </section>
           </section>
         ))}
       </main>
